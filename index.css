@@ -1,5 +1,6 @@
 body {
-	background-color: #111;
+	background-color: #222;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 header,
@@ -24,12 +25,42 @@ footer a {
 	padding: 1rem 0;
 }
 
+.tick line {
+	display: none;
+}
+
+.tick text {
+	fill: white;
+}
+
+.tooltip {
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 200ms ease, left 100ms ease, top 100ms ease;
+	border: 1px solid white;
+	border-radius: 4px;
+	padding: 0.5rem;
+	padding-bottom: 0.25rem;
+	position: absolute;
+}
+
+.tooltip .location {
+	color: inherit;
+	font-size: 0.8rem;
+}
+
+.tooltip .education {
+	color: inherit;
+	padding-top: 0.25rem;
+	font-size: 1.25rem;
+}
+
 .counties {
 	fill: none;
 }
 
 .states {
 	fill: none;
-	stroke: #fff;
+	stroke: white;
 	stroke-linejoin: round;
 }
